@@ -1,0 +1,44 @@
+nav ul {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.inicio {
+    position: absolute;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    margin-left: 250px;
+    transition: all 0.2s ease-out;
+}
+.inicio:hover{
+    transform: scale(1.1, 1.1);
+}
+
+nav li {
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(18, 111, 114);
+    padding: 5px;
+}
+
+nav li a:hover{
+    background-color: cadetblue;
+    color: cornsilk;
+    border-radius: 10%;            
+}
