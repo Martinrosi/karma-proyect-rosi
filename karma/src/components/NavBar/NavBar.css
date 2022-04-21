@@ -1,6 +1,6 @@
-nav ul {
+nav div {
     margin: 0;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 0;
     background-color: white;
     list-style-type: none;
@@ -15,7 +15,7 @@ ul {
 }
 .inicio {
     position: absolute;
-    padding: 5px;
+    padding: 5 px;
     background-color: white;
     border-radius: 10%;
     display: flex;
@@ -30,6 +30,7 @@ nav li {
     padding: 10px;
     position: relative;
     display: inline-block;
+    margin-bottom: 10px;
 }
 nav a{
     text-decoration: none;
