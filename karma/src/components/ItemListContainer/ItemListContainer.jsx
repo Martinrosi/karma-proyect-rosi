@@ -1,10 +1,14 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 import "./box.css";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = (greeting) => {
   return (
-    <p style={{color: props.color}}>Bienvenido a Karma.com</p>
+    <div className='contenedor'>
+      <ItemCount stock={10} initial={1} />
+    </div>
   )
 }
 
 export default ItemListContainer
+
