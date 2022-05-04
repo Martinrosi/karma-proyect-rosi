@@ -10,7 +10,7 @@ function ItemCount({ stock, initial,  onAdd }) {
       }
     }
     function menos (){
-      if (count > 0){
+      if (count > 1){
         setCount (count - 1);
       }
     }
