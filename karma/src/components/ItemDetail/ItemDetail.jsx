@@ -12,7 +12,7 @@ function ItemDetail({ item }) {
             </div>
             <div className="info">
                 <div className="infoContainer">
-                    <h2>{ item?.title }</h2>
+                    <h2>{ item?.name }</h2>
                     <h3>{ item?.autor }</h3>
                     <div className="resumen">
                         <h4>{ item?.resume }</h4>
