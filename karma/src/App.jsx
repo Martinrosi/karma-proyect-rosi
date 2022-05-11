@@ -4,18 +4,21 @@ import Footer from './components/Footer/Footer';
 import axios from 'axios';
 import ItemDetailContainer from './Pages1/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Pages1/ItemListContainer/ItemListContainer';
+import Cart from './Pages1/Cart/Cart';
 import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<ItemListContainer/>} />
-        <Route path='/Productos/:categoryId' element={<ItemListContainer/>} />
-        <Route path='/item/:id' element={<ItemDetailContainer/>} />
-      </Routes>
-      <Footer />
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>} />
+          <Route path='/Cart' element={<Cart />} />
+          <Route path='/Productos/:categoryId' element={<ItemListContainer/>} />
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+        </Routes>
+        <Footer />
     </div>
   );
 }
