@@ -9,18 +9,38 @@ export const CartContextProvider = ({children}) => {
   
     const [productList, setProductList] = useState([]);
     const addProduct = (product) => {
-        setProductList([product, ...productList]);
+        const repeatItemIndex = productList.findIndex(item => item.id === product.id)
+            if (repeatItemIndex !== -1) {
+                setProductList(productList.map(p => p.id === product.id ? {...p, quantity: p.quantity + product.quantity} : p));
+            } else {
+                setProductList([product, ...productList]);
+            }
     }
 
     const removeProduct = (id) => {
-        setProductList(productList.filter(i => i.id !== id));
+        setProductList(productList.filter((item) => item.id !== id));
     }
-    
+    const clear = () => {
+        setProductList([])
+    }
+
+    const isInCart = (id) => {
+        return productList.some((item) => item.id === id);
+    }
+
+    const getCartQuantity = () => {
+        return productList.reduce((total, value) => {
+            return total + value.quantity
+        }, 0)
+    }
     return (
     <CartContext.Provider value={{
         products: productList,
         addProduct: addProduct,
-        removeProduct: removeProduct
+        removeProduct: removeProduct,
+        clear: clear,
+        isInCart: isInCart,
+        getCartQuantity: getCartQuantity
     }}>
         {children}
     </CartContext.Provider>

@@ -5,13 +5,13 @@ import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
 function ItemDetail({ item }) {
-    const [cantidadProductos, setCantidadProductos] = useState(null);
+    // const [cantidadProductos, setCantidadProductos] = useState(null);
     const cartContxt = useContext(CartContext);
 
     
     function addHandler(quantityToAdd) {
-        setCantidadProductos(quantityToAdd)
-        cartContxt.addProduct(item)
+        cartContxt.addProduct({quantity: quantityToAdd, ...item});
+        
     }
 
     return (
@@ -31,9 +31,9 @@ function ItemDetail({ item }) {
                     <p>$ { item?.price }</p>
 
                    <div className="countContainer" >
-                       {cartContxt.products.length ?
-                        <button className="button1" onClick={() => console.log(cartContxt)}><Link to='/cart'>Finalizar la compra ({ cantidadProductos } item/s)</Link></button> :
-                        <ItemCount initial={0} stock={10} onAdd={addHandler} />  
+                       <ItemCount initial={1} stock={ item?.stock } onAdd={addHandler} />  
+                       {cartContxt.products.length &&
+                        <button className="button1" onClick={() => console.log(cartContxt)}><Link to='/cart'>Finalizar la compra ({ cartContxt.getCartQuantity() } item/s)</Link></button> 
                     }
                     </div>
                 </div>
