@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/cart-context";
 import './Items.css';
 
 function Item({ item }) {
+    const cartCtx = useContext(CartContext)
     return(
         <div className="card">
            
@@ -16,7 +18,8 @@ function Item({ item }) {
             <div className="precio">${ item.price }</div>
             <div className="button">
                 <Link to={'/item/' + item?.id} ><button className="button1">Informacion</button></Link>
-                <button className="button2">Añadir al carrito</button>
+                
+                <button className="button2" onClick={() => cartCtx.addProduct({quantity: 1, ...item})}>Añadir al carrito</button>
             </div>
         </div>
     )

@@ -1,0 +1,48 @@
+.box {
+    margin: 20px;
+    display: inline-block;
+    
+}
+.cart-item {
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.267);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.titulo{
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: rgb(5, 63, 63);
+}
+.price{
+    color: rgb(255, 255, 255);
+}
+
+.quitar {
+    height: 0;
+    position: relative;
+    right: -46%;
+}
+.cantidad p{
+    font-size: 20px;
+    margin: 0px;
+}
+.cantidad{
+    
+    height: 0;
+    position: relative;
+    bottom: 62%;
+    right: 0%;
+    height: 31px;
+    width: 100px;
+    background-color: aquamarine;
+    border-radius: 15px
+}

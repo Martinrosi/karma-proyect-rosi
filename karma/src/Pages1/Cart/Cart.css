@@ -1,0 +1,17 @@
+.cart {
+    background-image: url(/public/img/fondo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;
+}
+a{
+    text-decoration: none;
+    color: cornsilk;
+}
+.final-cart{
+    display: inline-block;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 15px;
+}

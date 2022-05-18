@@ -3,3 +3,17 @@
     padding: 5px;
     margin-right: 40px;
 }
+.numero {
+    font-size: 15px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    padding: 3px;
+
+    
+}
+.fondo{
+    height: 0;
+    position: relative;
+    bottom: 10%;
+    right: 45%;
+}
