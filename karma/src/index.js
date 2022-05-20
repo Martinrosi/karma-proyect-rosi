@@ -5,6 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { CartContextProvider } from './context/cart-context';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCwEddMTX5L05ZMtA3mkfP-Q6Gmp5YzUew",
+  authDomain: "proyecyo-karma.firebaseapp.com",
+  projectId: "proyecyo-karma",
+  storageBucket: "proyecyo-karma.appspot.com",
+  messagingSenderId: "530529200141",
+  appId: "1:530529200141:web:15ad017f6964284d8f0d44",
+  measurementId: "G-SZ3P0K6135"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
